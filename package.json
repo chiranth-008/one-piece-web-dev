@@ -1,0 +1,14 @@
+{
+  "name": "one-piece-web-dev",
+  "version": "1.0.0",
+  "description": "One Piece Storyline - Full Stack Web Dev Assignment",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7",
+    "cors": "^2.8.5"
+  }
+}
