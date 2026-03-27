@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Piece Odyssey | Grand Line Adventure</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-zinc-950 text-white">
+  <!-- Navbar -->
+  <nav class="bg-black sticky top-0 z-50 border-b border-yellow-600">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <i class="fas fa-skull-crossbones text-3xl text-yellow-400"></i>
+        <h1 class="text-2xl font-bold tracking-widest">ONE PIECE</h1>
+      </div>
+      <div class="flex gap-8 text-sm font-medium">
+        <a href="#story" class="hover:text-yellow-400 transition">STORYLINE</a>
+        <a href="#crew" class="hover:text-yellow-400 transition">CREW</a>
+        <a href="#fan" class="hover:text-yellow-400 transition">FAN CORNER</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="min-h-screen bg-[radial-gradient(at_center,#1a1200_0%,#000_70%)] flex items-center">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-6xl font-black leading-none mb-6">The Grand Line<br>Adventure Begins</h2>
+        <p class="text-xl text-yellow-300 mb-8">Monkey D. Luffy and the Straw Hat Pirates sail the seas in search of the ultimate treasure — ONE PIECE!</p>
+        <a href="#crew" class="inline-block bg-yellow-400 text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-amber-300 transition">Join the Crew →</a>
+      </div>
+      <div class="text-center">
+        <div class="text-[180px] leading-none">🏴‍☠️</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Storyline -->
+  <section id="story" class="py-20 bg-zinc-900">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Storyline Summary</h2>
+      <div class="prose prose-invert text-lg">
+        <p>After eating the Gomu Gomu no Mi, Monkey D. Luffy gains the ability to stretch like rubber. His dream is to find the legendary treasure "One Piece" left by the Pirate King Gol D. Roger and become the new Pirate King.</p>
+        <p>Together with his loyal crew — the Straw Hat Pirates — he sails the dangerous Grand Line, faces powerful Warlords, Emperors, and the World Government, forging unbreakable friendships along the way.</p>
+        <p class="text-yellow-300 font-bold">“I’m gonna be the Pirate King!” — Monkey D. Luffy</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Characters (loaded from Database) -->
+  <section id="crew" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Straw Hat Crew <span class="text-yellow-400">(From Database)</span></h2>
+      <div id="characters-grid" class="grid md:grid-cols-3 gap-8"></div>
+    </div>
+  </section>
+
+  <!-- Fan Corner (Add to Database) -->
+  <section id="fan" class="py-20 bg-zinc-900">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-8">Fan Corner — Recruit a New Member!</h2>
+      <form id="fan-form" class="space-y-6 bg-zinc-800 p-8 rounded-2xl">
+        <div>
+          <label class="block text-sm mb-2">Character Name</label>
+          <input type="text" id="name" required class="w-full bg-zinc-700 rounded-lg px-4 py-3">
+        </div>
+        <div class="grid grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm mb-2">Role</label>
+            <input type="text" id="role" required class="w-full bg-zinc-700 rounded-lg px-4 py-3" placeholder="e.g. Musician">
+          </div>
+          <div>
+            <label class="block text-sm mb-2">Power / Devil Fruit</label>
+            <input type="text" id="power" class="w-full bg-zinc-700 rounded-lg px-4 py-3">
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm mb-2">Short Description</label>
+          <textarea id="description" required rows="3" class="w-full bg-zinc-700 rounded-lg px-4 py-3"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-yellow-400 hover:bg-amber-300 text-black font-bold py-4 rounded-xl text-lg">
+          ADD TO THE CREW!
+        </button>
+      </form>
+      <p id="fan-message" class="text-center mt-4 font-medium"></p>
+    </div>
+  </section>
+
+  <footer class="bg-black py-8 text-center text-sm">
+    <p>Built for SEC Web Development Assignment • Kristu Jayanti University</p>
+    <p class="mt-2">GitHub Repo: <a href="https://github.com/YOURUSERNAME/one-piece-web-dev" target="_blank" class="underline">View Source</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
